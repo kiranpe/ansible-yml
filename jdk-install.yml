@@ -1,0 +1,9 @@
+- hosts: ubuntuhost
+  become: yes
+  tasks:
+    - name: install java
+      apt: 
+       name: openjdk-8-jdk 
+       state: present
+       update_cache: yes
+    - debug: msg="JDK has been installed successfully"
