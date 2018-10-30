@@ -1,0 +1,6 @@
+- hosts: ubuntuhost
+  become: yes
+  tasks:
+   - name: installing docker in new host
+     apt: name=docker.io state=present
+   - debug: msg="docker has been installed"

@@ -1,0 +1,8 @@
+- hosts: ubuntuhost
+  become: yes
+  tasks:
+    - name: installing apache
+      apt: name=apache2 state=latest
+    - name: remove apache
+      apt: name=apache2 state=absent
+    - debug: msg="apache has been removed"
